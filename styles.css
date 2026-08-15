@@ -1,0 +1,303 @@
+/* =========================================
+   PANEL PRINCIPAL
+   ========================================= */
+
+#tec-pendientes-panel {
+    width: 100%;
+    box-sizing: border-box;
+
+    margin-top: 12px;
+
+    background: white;
+
+    border: 3px solid #f0f0f0;
+    border-radius: 4px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: #333;
+}
+
+
+/* =========================================
+   TÍTULO
+   ========================================= */
+
+#tec-pendientes-panel .tp-titulo {
+    padding: 10px 12px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    color: #222;
+}
+
+
+/* =========================================
+   CONTENIDO
+   ========================================= */
+
+#tec-pendientes-panel .tp-contenido {
+    padding: 0 12px 12px 12px;
+}
+
+
+/* =========================================
+   SECCIÓN
+   ========================================= */
+
+#tec-pendientes-panel .tp-seccion {
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+
+
+/* =========================================
+   TÍTULO DE SECCIÓN
+   ========================================= */
+
+#tec-pendientes-panel .tp-seccion-titulo {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 7px 8px;
+
+    background: #f5f5f5;
+
+    border: 1px solid #e5e5e5;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    color: #333;
+}
+
+
+/* =========================================
+   CONTADOR
+   ========================================= */
+
+#tec-pendientes-panel .tp-contador {
+    padding: 1px 7px;
+
+    background: #e8e8e8;
+
+    border-radius: 10px;
+
+    font-size: 11px;
+
+    color: #555;
+}
+
+
+/* =========================================
+   TABLA
+   ========================================= */
+
+#tec-pendientes-panel .tp-tabla {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    table-layout: fixed;
+
+    border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+
+/* =========================================
+   CABECERA TABLA
+   ========================================= */
+
+#tec-pendientes-panel .tp-tabla th {
+    padding: 7px 8px;
+
+    background: #fafafa;
+
+    border-bottom: 1px solid #e5e5e5;
+
+    color: #555;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    text-align: left;
+}
+
+
+#tec-pendientes-panel .tp-tabla th:last-child {
+    width: 115px;
+
+    text-align: right;
+}
+
+
+/* =========================================
+   CELDAS
+   ========================================= */
+
+#tec-pendientes-panel .tp-tabla td {
+    padding: 8px;
+
+    border-bottom: 1px solid #eeeeee;
+
+    vertical-align: middle;
+
+    font-size: 12px;
+}
+
+
+#tec-pendientes-panel .tp-tabla tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* =========================================
+   ACTIVIDAD
+   ========================================= */
+
+#tec-pendientes-panel .tp-nombre {
+    color: #0066ff;
+
+    font-size: 12px;
+}
+
+
+#tec-pendientes-panel .tp-curso {
+    margin-top: 3px;
+
+    color: #777;
+
+    font-size: 10px;
+
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+}
+
+
+/* =========================================
+   FECHA
+   ========================================= */
+
+#tec-pendientes-panel .tp-col-fecha {
+    width: 115px;
+
+    text-align: right;
+
+    white-space: nowrap;
+
+    color: #555;
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   SIN ACTIVIDADES
+   ========================================= */
+
+#tec-pendientes-panel .tp-vacio {
+    padding: 9px 8px;
+
+    border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+
+    color: #888;
+
+    font-size: 11px;
+}
+
+
+@keyframes tp-girar {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+/* =========================================
+   ESTADO DE CARGA
+   ========================================= */
+
+#tec-pendientes-panel .tp-cargando {
+    min-height: 110px !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    gap: 12px !important;
+
+    box-sizing: border-box !important;
+
+    padding: 20px !important;
+
+    background: #ffffff !important;
+}
+
+
+/* =========================================
+   SPINNER
+   ========================================= */
+
+#tec-pendientes-panel .tp-spinner {
+    width: 26px !important;
+    height: 26px !important;
+
+    box-sizing: border-box !important;
+
+    border: 3px solid #e5e5e5 !important;
+    border-top-color: #5c6f82 !important;
+
+    border-radius: 50% !important;
+
+    animation: tp-girar 0.8s linear infinite !important;
+}
+
+
+/* =========================================
+   TEXTO
+   ========================================= */
+
+#tec-pendientes-panel .tp-cargando-texto {
+    color: #8a8a8a !important;
+
+    font-size: 12px !important;
+    font-weight: normal !important;
+
+    text-align: center !important;
+
+    letter-spacing: 0.1px !important;
+}
+
+
+/* =========================================
+   ANIMACIÓN
+   ========================================= */
+
+@keyframes tp-girar {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
