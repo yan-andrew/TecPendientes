@@ -22,7 +22,7 @@ La extensión agrega un panel de **"Mis actividades"** directamente en la págin
 ## Vista general
 Al ingresar a TecDigital, TecPendientes agrega un nuevo apartado debajo del panel de aplicaciones:
 <p align="center">
-  <img src="assets/Ejemplo.png" width="160" alt="Ejemplo de TecPendientes">
+  <img src="assets/Ejemplo.png" width="800" alt="Ejemplo de TecPendientes">
 </p>
 
 Mientras la información está siendo procesada, el panel muestra un indicador de carga.
