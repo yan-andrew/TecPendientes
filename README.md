@@ -1,6 +1,7 @@
 <p align="center">
   <img src="assets/logo.png" width="160" alt="Logo de TecPendientes">
 </p>
+
 ## TecPendientes
 TecPendientes es una extensión para navegadores basada en Chromium que mejora la visualización de las actividades académicas en TecDigital.
 La extensión agrega un panel de **"Mis actividades"** directamente en la página principal de TecDigital, permitiendo consultar rápidamente las actividades pendientes, entregadas y cerradas recientemente sin tener que ingresar individualmente al módulo de evaluaciones de cada curso.
