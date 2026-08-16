@@ -3,36 +3,38 @@ function esEncabezadoActividad(texto) {
         return false;
     }
 
-    texto = texto
-        .replace(/\s+/g, " ")
-        .replace("expand_less", "")
-        .replace("expand_more", "")
-        .trim();
+    texto = texto.replace(/\s+/g, " ").replace("expand_less", "").replace("expand_more", "").trim();
 
     if (texto.includes(":")) {
         return false;
     }
 
-    const patron = /^.+?\s+(?:--|[-+]?\d+(?:[.,]\d+)?)\s*\/\s*\d+(?:[.,]\d+)?$/;
+    const patronConValor = /^.+?\s+(?:--|[-+]?\d+(?:[.,]\d+)?)\s*\/\s*\d+(?:[.,]\d+)?$/;
 
-    return patron.test(texto);
+    const patronSinValor = /^.+?\s+--$/;
+
+    return patronConValor.test(texto) || patronSinValor.test(texto);
 }
 
 
 function obtenerNombreActividad(texto) {
     texto = texto.replace(/\s+/g, " ").replace("expand_less", "").replace("expand_more", "").trim();
 
-    const posicionSlash =texto.indexOf("/");
+    const posicionSlash = texto.indexOf("/");
 
-    if (posicionSlash === -1) {
-        return null;
+    if (posicionSlash !== -1) {
+        let parteIzquierda = texto.substring(0, posicionSlash).trim();
+        parteIzquierda = parteIzquierda.replace(/\s+(?:--|[-+]?\d+(?:[.,]\d+)?)$/, "").trim();
+
+        return limpiarNombreActividad(parteIzquierda);
     }
 
+    if (texto.endsWith("--")) {
+        const nombre = texto.replace(/\s+--$/, "").trim();
+        return limpiarNombreActividad(nombre)
+    }
 
-    let parteIzquierda = texto.substring(0,posicionSlash).trim();
-    parteIzquierda =parteIzquierda.replace(/\s+(?:--|[-+]?\d+(?:[.,]\d+)?)$/,"").trim();
-
-    return parteIzquierda;
+    return null;
 }
 
 
@@ -68,6 +70,10 @@ function crearActividad(elementoEncabezado,nombreCurso,urlCurso,urlEvaluaciones)
     const textoEncabezado =elementoEncabezado.textContent.replace(/\s+/g, " ").trim();
     const nombre = obtenerNombreActividad(textoEncabezado);
 
+    if (nombre.includes("Ponderado")) {
+        return null;
+    }
+
     if (!nombre) {
         return null;
     }
@@ -78,14 +84,14 @@ function crearActividad(elementoEncabezado,nombreCurso,urlCurso,urlEvaluaciones)
         return null;
     }
 
-    const textoCompleto =contenedor.textContent.replace(/\s+/g, " ").trim();
-    const fechaTexto =extraerFechaEntrega(textoCompleto);
+    const textoCompleto = contenedor.textContent.replace(/\s+/g, " ").trim();
+    const fechaTexto = extraerFechaEntrega(textoCompleto);
 
     if (!fechaTexto) {
         return null;
     }
 
-    const fechaEntrega =convertirFechaTecDigital(fechaTexto);
+    const fechaEntrega = convertirFechaTecDigital(fechaTexto);
 
     if (!fechaEntrega) {
         return null;
@@ -107,6 +113,10 @@ function crearActividad(elementoEncabezado,nombreCurso,urlCurso,urlEvaluaciones)
     };
 }
 
+function limpiarNombreActividad(nombre) {
+    return nombre.replace(/\s+Ponderado$/i, "").trim();
+}
+
 function detectarActividades(contenidoEvaluaciones,nombreCurso) {
     const actividades = [];
     const encontradas = new Set();
@@ -120,25 +130,20 @@ function detectarActividades(contenidoEvaluaciones,nombreCurso) {
             continue;
         }
 
-        const actividad = crearActividad(elemento,nombreCurso);
+        const actividad = crearActividad(elemento, nombreCurso);
 
         if (!actividad) {
             continue;
         }
 
-        const identificador =nombreCurso +"|" +actividad.nombre;
+        const identificador = nombreCurso + "|" + actividad.nombre;
 
         if (encontradas.has(identificador)) {
             continue;
         }
 
-        encontradas.add(
-            identificador
-        );
-
-        actividades.push(
-            actividad
-        );
+        encontradas.add(identificador);
+        actividades.push(actividad);
     }
 
     return actividades;
