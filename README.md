@@ -67,5 +67,6 @@ Las sugerencias, reportes de errores y contribuciones son bienvenidas.
 Puede utilizar la sección de **Issues** del repositorio para reportar problemas o proponer mejoras.
 
 ## Licencia
-Este proyecto se distribuye bajo la licencia **MIT**.
+Este proyecto se distribuye bajo una licencia de uso no comercial.
+El código fuente puede ser utilizado, estudiado y modificado con fines personales, educativos y académicos. No se permite su uso comercial, venta o monetización sin autorización previa.
 Consulte el archivo `LICENSE` para obtener más información.
