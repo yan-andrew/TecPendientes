@@ -7,12 +7,12 @@ TecPendientes es una extensión para navegadores basada en Chromium que mejora l
 La extensión agrega un panel de **"Mis actividades"** directamente en la página principal de TecDigital, permitiendo consultar rápidamente las actividades pendientes, entregadas y cerradas recientemente sin tener que ingresar individualmente al módulo de evaluaciones de cada curso.
 
 ## Enlaces de descarga
-# Navegadores
 
-| Google Chrome | Microsoft Edge | Mozilla Firefox |
-| :---: | :---: | :---: |
-| [<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/chrome/chrome-original.svg" width="60"/>](https://www.google.com/chrome/) | [<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/edge/edge-original.svg" width="60"/>](https://www.microsoft.com/edge) | [<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firefox/firefox-original.svg" width="60"/>](https://www.mozilla.org/firefox/) |
-| https://chromewebstore.google.com/detail/tecpendientes-inspector/nabnemlmbmfacecaecfeablipcldgnfa?utm_source=ext_app_menu | https://microsoftedge.microsoft.com/addons/detail/ljijiplmjogdmhkehhhdlobkfbkfgldk | https://addons.mozilla.org/es-ES/firefox/addon/tecpendientes-inspector/ |
+| Navegador |
+| :---: |
+| [<img src="https://www.google.com/chrome/static/images/chrome-logo-m100.svg" width="65" alt="Google Chrome">](https://chromewebstore.google.com/detail/tecpendientes-inspector/nabnemlmbmfacecaecfeablipcldgnfa?utm_source=ext_app_menu) |
+| [<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftedge.svg" width="65" alt="Microsoft Edge">](https://microsoftedge.microsoft.com/addons/detail/ljijiplmjogdmhkehhhdlobkfbkfgldk) |
+| [<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firefox/firefox-original.svg" width="65" alt="Mozilla Firefox">](https://addons.mozilla.org/es-ES/firefox/addon/tecpendientes-inspector/) |
 
 ## Características
 - Detecta automáticamente los cursos actuales del estudiante.
