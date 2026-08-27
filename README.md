@@ -8,11 +8,11 @@ La extensión agrega un panel de **"Mis actividades"** directamente en la págin
 
 ## Enlaces de descarga
 
-| Navegador |
-| :---: |
-| [<img src="https://www.google.com/chrome/static/images/chrome-logo-m100.svg" width="65" alt="Google Chrome">](https://chromewebstore.google.com/detail/tecpendientes-inspector/nabnemlmbmfacecaecfeablipcldgnfa?utm_source=ext_app_menu) |
-| [<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftedge.svg" width="65" alt="Microsoft Edge">](https://microsoftedge.microsoft.com/addons/detail/ljijiplmjogdmhkehhhdlobkfbkfgldk) |
-| [<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firefox/firefox-original.svg" width="65" alt="Mozilla Firefox">](https://addons.mozilla.org/es-ES/firefox/addon/tecpendientes-inspector/) |
+| Navegador | Enlace |
+| :---: | :--- |
+| <img src="https://www.google.com/chrome/static/images/chrome-logo-m100.svg" width="65" alt="Google Chrome"> | https://chromewebstore.google.com/detail/tecpendientes-inspector/nabnemlmbmfacecaecfeablipcldgnfa?utm_source=ext_app_menu |
+| <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftedge.svg" width="65" alt="Microsoft Edge"> | https://microsoftedge.microsoft.com/addons/detail/ljijiplmjogdmhkehhhdlobkfbkfgldk |
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firefox/firefox-original.svg" width="65" alt="Mozilla Firefox"> | https://addons.mozilla.org/es-ES/firefox/addon/tecpendientes-inspector/ |
 
 ## Características
 - Detecta automáticamente los cursos actuales del estudiante.
