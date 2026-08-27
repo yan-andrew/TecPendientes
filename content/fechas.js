@@ -45,7 +45,7 @@ function actividadYaCerro(fechaEntrega) {
 
 function cerroRecientemente(fechaEntrega) {
     const ahora = new Date();
-    const diferencia = ahora.getTime() -fechaEntrega.getTime();
+    const diferencia = ahora.getTime() - fechaEntrega.getTime();
     const sieteDias = 7 * 24 * 60 * 60 * 1000;
 
     return (diferencia >= 0 && diferencia <= sieteDias);

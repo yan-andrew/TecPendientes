@@ -32,9 +32,12 @@ async function analizarCurso(curso) {
 
 async function iniciar() {
     mostrarPanelCargando();
+
     const cursos = obtenerCursosActuales();
-    const resultados = await Promise.all(cursos.map(curso => analizarCurso(curso)));
-    const actividades = resultados.flat();
+    const [resultadosCursos, eventosCalendario] = await Promise.all([Promise.all(cursos.map(curso => analizarCurso(curso))), obtenerActividadesCalendario()]);
+
+    const actividadesCursos = resultadosCursos.flat();
+    const actividades = [...actividadesCursos, ...eventosCalendario];
     const resultado = clasificarActividades(actividades);
 
     actualizarPanelActividades(resultado);

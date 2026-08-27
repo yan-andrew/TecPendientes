@@ -10,7 +10,6 @@ function esEncabezadoActividad(texto) {
     }
 
     const patronConValor = /^.+?\s+(?:--|[-+]?\d+(?:[.,]\d+)?)\s*\/\s*\d+(?:[.,]\d+)?$/;
-
     const patronSinValor = /^.+?\s+--$/;
 
     return patronConValor.test(texto) || patronSinValor.test(texto);
@@ -66,8 +65,8 @@ function estaEntregada(contenedorActividad) {
     return (tieneDia ||tieneHora);
 }
 
-function crearActividad(elementoEncabezado,nombreCurso,urlCurso,urlEvaluaciones) {
-    const textoEncabezado =elementoEncabezado.textContent.replace(/\s+/g, " ").trim();
+function crearActividad(elementoEncabezado, nombreCurso, urlCurso, urlEvaluaciones) {
+    const textoEncabezado = elementoEncabezado.textContent.replace(/\s+/g, " ").trim();
     const nombre = obtenerNombreActividad(textoEncabezado);
 
     if (nombre.includes("Ponderado")) {
@@ -117,7 +116,7 @@ function limpiarNombreActividad(nombre) {
     return nombre.replace(/\s+Ponderado$/i, "").trim();
 }
 
-function detectarActividades(contenidoEvaluaciones,nombreCurso) {
+function detectarActividades(contenidoEvaluaciones, nombreCurso, urlCurso, urlEvaluaciones) {
     const actividades = [];
     const encontradas = new Set();
 
@@ -130,7 +129,7 @@ function detectarActividades(contenidoEvaluaciones,nombreCurso) {
             continue;
         }
 
-        const actividad = crearActividad(elemento, nombreCurso);
+        const actividad = crearActividad(elemento, nombreCurso, urlCurso, urlEvaluaciones);
 
         if (!actividad) {
             continue;
